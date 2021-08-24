@@ -1,0 +1,24 @@
+/*
+	Neutron Scattering.h -- equates for "Neutron Scattering" XOP
+*/
+
+// Igor definitions
+#include "XOPStandardHeaders.h"
+
+/* Neutron Scattering custom error codes */
+#define REQUIRES_IGOR_804 1 + FIRST_XOP_ERR
+#define REQUIRES_COUNTING_TIME 2 + FIRST_XOP_ERR
+#define NULL_COUNT_RATE 3 + FIRST_XOP_ERR
+#define NULL_MONITOR_VALUE 4 + FIRST_XOP_ERR
+#define INIFINTE_FLIPPING_RATIO 5 + FIRST_XOP_ERR
+#define INIFINTE_FLIPPING_RATIO_SDEV 6 + FIRST_XOP_ERR
+#define INFINITE_COUNTING_TIME 7 + FIRST_XOP_ERR
+#define INFINITE_COUNTING_TIME_SDEV 8 + FIRST_XOP_ERR
+#define UNDEFINED_DETECTOR_POSITION 9 + FIRST_XOP_ERR
+#define INIFINTE_ASYMMETRY 10 + FIRST_XOP_ERR
+#define INIFINTE_ASYMMETRY_SDEV 11 + FIRST_XOP_ERR
+#define UNDEFINED_COUNT_RATE 12 + FIRST_XOP_ERR
+#define NULL_LAT_DET 13 + FIRST_XOP_ERR
+
+/* Prototypes */
+HOST_IMPORT int XOPMain(IORecHandle ioRecHandle);

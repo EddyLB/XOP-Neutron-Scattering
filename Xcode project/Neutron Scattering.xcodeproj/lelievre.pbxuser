@@ -1,0 +1,266 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeBuildConfigurationName = "Snow Leopard - 10.6";
+		activeTarget = 8D01CCC60486CAD60068D4B7 /* Neutron Scattering */;
+		addToTargets = (
+			8D01CCC60486CAD60068D4B7 /* Neutron Scattering */,
+		);
+		codeSenseManager = ADCC4A8910F9F50100B7B721 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					679,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					639,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 304491183;
+			PBXWorkspaceStateSaveDate = 304491183;
+		};
+		perUserProjectItems = {
+			AD41CDFC10FA052100F78571 /* PBXTextBookmark */ = AD41CDFC10FA052100F78571 /* PBXTextBookmark */;
+			AD41CDFD10FA052100F78571 /* PBXTextBookmark */ = AD41CDFD10FA052100F78571 /* PBXTextBookmark */;
+			AD5E6D50116F112200CDFF3D /* PBXTextBookmark */ = AD5E6D50116F112200CDFF3D /* PBXTextBookmark */;
+			AD5E6D69116F17FE00CDFF3D /* PBXTextBookmark */ = AD5E6D69116F17FE00CDFF3D /* PBXTextBookmark */;
+			AD5E6D6A116F17FE00CDFF3D /* PBXTextBookmark */ = AD5E6D6A116F17FE00CDFF3D /* PBXTextBookmark */;
+			AD5E6D6B116F17FE00CDFF3D /* PBXTextBookmark */ = AD5E6D6B116F17FE00CDFF3D /* PBXTextBookmark */;
+			ADB1F26D12262BA300800EAB /* PBXTextBookmark */ = ADB1F26D12262BA300800EAB /* PBXTextBookmark */;
+			ADB1F2A412262EC000800EAB /* PBXTextBookmark */ = ADB1F2A412262EC000800EAB /* PBXTextBookmark */;
+			ADFDB9F1112FFF80008AEC74 /* PBXTextBookmark */ = ADFDB9F1112FFF80008AEC74 /* PBXTextBookmark */;
+			ADFDB9F2112FFF80008AEC74 /* PBXTextBookmark */ = ADFDB9F2112FFF80008AEC74 /* PBXTextBookmark */;
+			ADFDB9F3112FFF80008AEC74 /* PlistBookmark */ = ADFDB9F3112FFF80008AEC74 /* PlistBookmark */;
+		};
+		sourceControlManager = ADCC4A8810F9F50100B7B721 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 871}}";
+			sepNavSelRange = "{242, 0}";
+			sepNavVisRange = "{0, 300}";
+		};
+	};
+	8D01CCC60486CAD60068D4B7 /* Neutron Scattering */ = {
+		activeExec = 0;
+	};
+	AD41CDFC10FA052100F78571 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58ABA50A72599F007E241F /* Neutron Scattering.r */;
+		name = "Neutron Scattering.r: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1727;
+		vrLoc = 0;
+	};
+	AD41CDFD10FA052100F78571 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58ABA40A72599F007E241F /* Neutron Scattering.h */;
+		name = "Neutron Scattering.h: 9";
+		rLen = 0;
+		rLoc = 191;
+		rType = 0;
+		vrLen = 859;
+		vrLoc = 0;
+	};
+	AD58ABA30A72599F007E241F /* Neutron Scattering.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1202, 4992}}";
+			sepNavSelRange = "{13298, 0}";
+			sepNavVisRange = "{11547, 1782}";
+		};
+	};
+	AD58ABA40A72599F007E241F /* Neutron Scattering.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 875}}";
+			sepNavSelRange = "{191, 0}";
+			sepNavVisRange = "{0, 859}";
+		};
+	};
+	AD58ABA50A72599F007E241F /* Neutron Scattering.r */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 7605}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1727}";
+		};
+	};
+	AD58AC8B0A726225007E241F /* He3Efficiency.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 867}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1371}";
+		};
+	};
+	AD58AC8C0A726225007E241F /* He3Polarisation.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 867}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1609}";
+		};
+	};
+	AD58AC8D0A726225007E241F /* He3Transmission.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 863}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1777}";
+		};
+	};
+	AD5E6D50116F112200CDFF3D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ADFDB9F7112FFF80008AEC74 /* XMLutils_Prefix.pch */;
+		name = "XMLutils_Prefix.pch: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 124;
+		vrLoc = 0;
+	};
+	AD5E6D69116F17FE00CDFF3D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = ADE2E7340E4627E300EE206B /* He3Efficiency2.c */;
+		name = "He3Efficiency2.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1115;
+		vrLoc = 0;
+	};
+	AD5E6D6A116F17FE00CDFF3D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58AC8C0A726225007E241F /* He3Polarisation.c */;
+		name = "He3Polarisation.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1609;
+		vrLoc = 0;
+	};
+	AD5E6D6B116F17FE00CDFF3D /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58AC8B0A726225007E241F /* He3Efficiency.c */;
+		name = "He3Efficiency.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1371;
+		vrLoc = 0;
+	};
+	ADB1F26D12262BA300800EAB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58AC8D0A726225007E241F /* He3Transmission.c */;
+		name = "He3Transmission.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1777;
+		vrLoc = 0;
+	};
+	ADB1F2A412262EC000800EAB /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58AC8D0A726225007E241F /* He3Transmission.c */;
+		name = "He3Transmission.c: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1777;
+		vrLoc = 0;
+	};
+	ADCC4A8810F9F50100B7B721 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "XOP ModBus";
+			};
+		};
+	};
+	ADCC4A8910F9F50100B7B721 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	ADE2E7340E4627E300EE206B /* He3Efficiency2.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {857, 867}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1115}";
+		};
+	};
+	ADFDB9F1112FFF80008AEC74 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = AD58ABA30A72599F007E241F /* Neutron Scattering.c */;
+		name = "Neutron Scattering.c: 376";
+		rLen = 0;
+		rLoc = 13298;
+		rType = 0;
+		vrLen = 1782;
+		vrLoc = 11547;
+	};
+	ADFDB9F2112FFF80008AEC74 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 089C167EFE841241C02AAC07 /* English */;
+		name = "InfoPlist.strings: 6";
+		rLen = 0;
+		rLoc = 242;
+		rType = 0;
+		vrLen = 300;
+		vrLoc = 0;
+	};
+	ADFDB9F3112FFF80008AEC74 /* PlistBookmark */ = {
+		isa = PlistBookmark;
+		fRef = 8D01CCD10486CAD60068D4B7 /* Info.plist */;
+		fallbackIsa = PBXBookmark;
+		isK = 0;
+		kPath = (
+		);
+		name = "/Users/lelievre/Software/XOP Neutron Scattering/Xcode project/Info.plist";
+		rLen = 0;
+		rLoc = 9223372036854775808;
+	};
+	ADFDB9F7112FFF80008AEC74 /* XMLutils_Prefix.pch */ = {
+		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
+		name = XMLutils_Prefix.pch;
+		path = "/Users/lelievre/Software/XOP_XMLutils/src/Xcode project/XMLutils_Prefix.pch";
+		sourceTree = "<absolute>";
+	};
+}

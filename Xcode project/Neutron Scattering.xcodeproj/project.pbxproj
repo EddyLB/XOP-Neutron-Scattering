@@ -1,0 +1,617 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
+		AD317DA02415153800A6AF0B /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD317D9F2415153800A6AF0B /* Carbon.framework */; };
+		AD317DA4241516FC00A6AF0B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD317DA3241516FC00A6AF0B /* AudioToolbox.framework */; };
+		AD317DA62415172900A6AF0B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD317DA52415172900A6AF0B /* Cocoa.framework */; };
+		AD3B2D61106A15E400DDA6FF /* Neutron Scattering Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AD3B2D60106A15E400DDA6FF /* Neutron Scattering Prefix.pch */; };
+		AD58ABA60A72599F007E241F /* Neutron Scattering.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58ABA30A72599F007E241F /* Neutron Scattering.c */; };
+		AD58ABE00A7259C9007E241F /* OptCountingTimeTbm.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58ABBE0A7259C9007E241F /* OptCountingTimeTbm.c */; };
+		AD58ABE10A7259C9007E241F /* OptCountingTimeTbp.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58ABBF0A7259C9007E241F /* OptCountingTimeTbp.c */; };
+		AD58ABE20A7259C9007E241F /* OptCountingTimeTpm.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58ABC00A7259C9007E241F /* OptCountingTimeTpm.c */; };
+		AD58ABE30A7259C9007E241F /* OptCountingTimeTpp.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58ABC10A7259C9007E241F /* OptCountingTimeTpp.c */; };
+		AD58AC0F0A725D90007E241F /* Neutron Scattering.h in Headers */ = {isa = PBXBuildFile; fileRef = AD58ABA40A72599F007E241F /* Neutron Scattering.h */; };
+		AD58AC120A725DE8007E241F /* Neutron Scattering.r in Rez */ = {isa = PBXBuildFile; fileRef = AD58ABA50A72599F007E241F /* Neutron Scattering.r */; };
+		AD58AC5C0A726193007E241F /* CountRate.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC590A726193007E241F /* CountRate.c */; };
+		AD58AC5D0A726193007E241F /* CountRateDDT.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC5A0A726193007E241F /* CountRateDDT.c */; };
+		AD58AC5E0A726193007E241F /* CountRateMonitor.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC5B0A726193007E241F /* CountRateMonitor.c */; };
+		AD58AC630A72619E007E241F /* FlippingRatio.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC600A72619E007E241F /* FlippingRatio.c */; };
+		AD58AC640A72619E007E241F /* FlippingRatioOpt.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC610A72619E007E241F /* FlippingRatioOpt.c */; };
+		AD58AC650A72619E007E241F /* FlippingRatioOptDDT.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC620A72619E007E241F /* FlippingRatioOptDDT.c */; };
+		AD58AC690A7261B3007E241F /* PeakCentringGauss.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC670A7261B3007E241F /* PeakCentringGauss.c */; };
+		AD58AC6A0A7261B3007E241F /* PeakCentringLin.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC680A7261B3007E241F /* PeakCentringLin.c */; };
+		AD58AC760A7261BD007E241F /* STLcubic.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC6D0A7261BD007E241F /* STLcubic.c */; };
+		AD58AC770A7261BD007E241F /* STLhexagonal.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC6E0A7261BD007E241F /* STLhexagonal.c */; };
+		AD58AC780A7261BD007E241F /* STLmonoclinicB.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC6F0A7261BD007E241F /* STLmonoclinicB.c */; };
+		AD58AC790A7261BD007E241F /* STLmonoclinicC.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC700A7261BD007E241F /* STLmonoclinicC.c */; };
+		AD58AC7A0A7261BD007E241F /* STLorthorhombic.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC710A7261BD007E241F /* STLorthorhombic.c */; };
+		AD58AC7B0A7261BD007E241F /* STLrhombohedral.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC720A7261BD007E241F /* STLrhombohedral.c */; };
+		AD58AC7C0A7261BD007E241F /* STLtetragonal.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC730A7261BD007E241F /* STLtetragonal.c */; };
+		AD58AC7D0A7261BD007E241F /* STLtriclinic.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC740A7261BD007E241F /* STLtriclinic.c */; };
+		AD58AC820A726212007E241F /* Asymmetry.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC7F0A726212007E241F /* Asymmetry.c */; };
+		AD58AC830A726212007E241F /* AsymmetryOpt.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC800A726212007E241F /* AsymmetryOpt.c */; };
+		AD58AC840A726212007E241F /* AsymmetryOptDDT.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC810A726212007E241F /* AsymmetryOptDDT.c */; };
+		AD58AC8E0A726225007E241F /* He3Efficiency.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC8B0A726225007E241F /* He3Efficiency.c */; };
+		AD58AC8F0A726225007E241F /* He3Polarisation.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC8C0A726225007E241F /* He3Polarisation.c */; };
+		AD58AC900A726225007E241F /* He3Transmission.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58AC8D0A726225007E241F /* He3Transmission.c */; };
+		AD58ACB60A726383007E241F /* RLparameters.c in Sources */ = {isa = PBXBuildFile; fileRef = AD58ACB50A726383007E241F /* RLparameters.c */; };
+		AD58AD340A7267EA007E241F /* OptCountingTime.h in Headers */ = {isa = PBXBuildFile; fileRef = AD58AD330A7267EA007E241F /* OptCountingTime.h */; };
+		AD58AD520A7269C2007E241F /* CountRate.h in Headers */ = {isa = PBXBuildFile; fileRef = AD58AD510A7269C2007E241F /* CountRate.h */; };
+		AD6DC4FF26D52BB1004F5225 /* libXOPSupport64.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD6DC4FE26D52BA0004F5225 /* libXOPSupport64.a */; };
+		ADA5DE650A726F8F002628DE /* FlippingRatio.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA5DE640A726F8F002628DE /* FlippingRatio.h */; };
+		ADA5DF9C0A72748B002628DE /* PeakCentring.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA5DF420A7272ED002628DE /* PeakCentring.h */; };
+		ADA5E0770A727C73002628DE /* SinThetaLambda.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA5DFA60A727861002628DE /* SinThetaLambda.h */; };
+		ADA5E08F0A727D23002628DE /* Asymmetry.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA5E0810A727D11002628DE /* Asymmetry.h */; };
+		ADA5E1860A728161002628DE /* 3He NSF.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA5E1150A727F77002628DE /* 3He NSF.h */; };
+		ADE2E7350E4627E300EE206B /* He3Efficiency2.c in Sources */ = {isa = PBXBuildFile; fileRef = ADE2E7340E4627E300EE206B /* He3Efficiency2.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D01CCD10486CAD60068D4B7 /* Info64.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info64.plist; sourceTree = "<group>"; };
+		8D01CCD20486CAD60068D4B7 /* Neutron Scattering-64.xop */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Neutron Scattering-64.xop"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD317D9F2415153800A6AF0B /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
+		AD317DA3241516FC00A6AF0B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AD317DA52415172900A6AF0B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		AD317DA72415173600A6AF0B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AD3B2D60106A15E400DDA6FF /* Neutron Scattering Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Neutron Scattering Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		AD58ABA30A72599F007E241F /* Neutron Scattering.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = "Neutron Scattering.c"; sourceTree = "<group>"; };
+		AD58ABA40A72599F007E241F /* Neutron Scattering.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = "Neutron Scattering.h"; sourceTree = "<group>"; };
+		AD58ABA50A72599F007E241F /* Neutron Scattering.r */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.rez; path = "Neutron Scattering.r"; sourceTree = "<group>"; };
+		AD58ABBE0A7259C9007E241F /* OptCountingTimeTbm.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = OptCountingTimeTbm.c; sourceTree = "<group>"; };
+		AD58ABBF0A7259C9007E241F /* OptCountingTimeTbp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = OptCountingTimeTbp.c; sourceTree = "<group>"; };
+		AD58ABC00A7259C9007E241F /* OptCountingTimeTpm.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = OptCountingTimeTpm.c; sourceTree = "<group>"; };
+		AD58ABC10A7259C9007E241F /* OptCountingTimeTpp.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = OptCountingTimeTpp.c; sourceTree = "<group>"; };
+		AD58AC590A726193007E241F /* CountRate.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = CountRate.c; sourceTree = "<group>"; };
+		AD58AC5A0A726193007E241F /* CountRateDDT.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = CountRateDDT.c; sourceTree = "<group>"; };
+		AD58AC5B0A726193007E241F /* CountRateMonitor.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = CountRateMonitor.c; sourceTree = "<group>"; };
+		AD58AC600A72619E007E241F /* FlippingRatio.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = FlippingRatio.c; sourceTree = "<group>"; };
+		AD58AC610A72619E007E241F /* FlippingRatioOpt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = FlippingRatioOpt.c; sourceTree = "<group>"; };
+		AD58AC620A72619E007E241F /* FlippingRatioOptDDT.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = FlippingRatioOptDDT.c; sourceTree = "<group>"; };
+		AD58AC670A7261B3007E241F /* PeakCentringGauss.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = PeakCentringGauss.c; sourceTree = "<group>"; };
+		AD58AC680A7261B3007E241F /* PeakCentringLin.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = PeakCentringLin.c; sourceTree = "<group>"; };
+		AD58AC6D0A7261BD007E241F /* STLcubic.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLcubic.c; sourceTree = "<group>"; };
+		AD58AC6E0A7261BD007E241F /* STLhexagonal.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLhexagonal.c; sourceTree = "<group>"; };
+		AD58AC6F0A7261BD007E241F /* STLmonoclinicB.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLmonoclinicB.c; sourceTree = "<group>"; };
+		AD58AC700A7261BD007E241F /* STLmonoclinicC.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLmonoclinicC.c; sourceTree = "<group>"; };
+		AD58AC710A7261BD007E241F /* STLorthorhombic.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLorthorhombic.c; sourceTree = "<group>"; };
+		AD58AC720A7261BD007E241F /* STLrhombohedral.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLrhombohedral.c; sourceTree = "<group>"; };
+		AD58AC730A7261BD007E241F /* STLtetragonal.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLtetragonal.c; sourceTree = "<group>"; };
+		AD58AC740A7261BD007E241F /* STLtriclinic.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = STLtriclinic.c; sourceTree = "<group>"; };
+		AD58AC7F0A726212007E241F /* Asymmetry.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = Asymmetry.c; sourceTree = "<group>"; };
+		AD58AC800A726212007E241F /* AsymmetryOpt.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = AsymmetryOpt.c; sourceTree = "<group>"; };
+		AD58AC810A726212007E241F /* AsymmetryOptDDT.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = AsymmetryOptDDT.c; sourceTree = "<group>"; };
+		AD58AC8B0A726225007E241F /* He3Efficiency.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = He3Efficiency.c; sourceTree = "<group>"; };
+		AD58AC8C0A726225007E241F /* He3Polarisation.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = He3Polarisation.c; sourceTree = "<group>"; };
+		AD58AC8D0A726225007E241F /* He3Transmission.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = He3Transmission.c; sourceTree = "<group>"; };
+		AD58ACB50A726383007E241F /* RLparameters.c */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.c; path = RLparameters.c; sourceTree = "<group>"; };
+		AD58AD330A7267EA007E241F /* OptCountingTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptCountingTime.h; sourceTree = "<group>"; };
+		AD58AD510A7269C2007E241F /* CountRate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountRate.h; sourceTree = "<group>"; };
+		AD6DC4FE26D52BA0004F5225 /* libXOPSupport64.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXOPSupport64.a; path = "../../XOPSupport-8.00/Xcode/libXOPSupport64.a"; sourceTree = "<group>"; };
+		ADA5DE640A726F8F002628DE /* FlippingRatio.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlippingRatio.h; sourceTree = "<group>"; };
+		ADA5DF420A7272ED002628DE /* PeakCentring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeakCentring.h; sourceTree = "<group>"; };
+		ADA5DFA60A727861002628DE /* SinThetaLambda.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinThetaLambda.h; sourceTree = "<group>"; };
+		ADA5E0810A727D11002628DE /* Asymmetry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Asymmetry.h; sourceTree = "<group>"; };
+		ADA5E1150A727F77002628DE /* 3He NSF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "3He NSF.h"; sourceTree = "<group>"; };
+		ADE2E7340E4627E300EE206B /* He3Efficiency2.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = He3Efficiency2.c; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D01CCCD0486CAD60068D4B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD317DA62415172900A6AF0B /* Cocoa.framework in Frameworks */,
+				AD6DC4FF26D52BB1004F5225 /* libXOPSupport64.a in Frameworks */,
+				AD317DA4241516FC00A6AF0B /* AudioToolbox.framework in Frameworks */,
+				AD317DA02415153800A6AF0B /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		089C166AFE841209C02AAC07 /* Polarised Neutrons */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77ADFE841716C02AAC07 /* Source Code */,
+				089C167CFE841241C02AAC07 /* Resources */,
+				089C1671FE841209C02AAC07 /* External Frameworks and Libraries */,
+				AD317D9E2415153800A6AF0B /* Frameworks */,
+				19C28FB4FE9D528D11CA2CBB /* Products */,
+			);
+			name = "Polarised Neutrons";
+			sourceTree = "<group>";
+		};
+		089C1671FE841209C02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		089C167CFE841241C02AAC07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AD58ABA50A72599F007E241F /* Neutron Scattering.r */,
+				8D01CCD10486CAD60068D4B7 /* Info64.plist */,
+				089C167DFE841241C02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		08FB77ADFE841716C02AAC07 /* Source Code */ = {
+			isa = PBXGroup;
+			children = (
+				AD58ABA30A72599F007E241F /* Neutron Scattering.c */,
+				AD58ABA40A72599F007E241F /* Neutron Scattering.h */,
+				AD3B2D60106A15E400DDA6FF /* Neutron Scattering Prefix.pch */,
+				AD58AC580A726193007E241F /* CountRate */,
+				AD58AC5F0A72619E007E241F /* FlippingRatio */,
+				AD58ABBC0A7259C9007E241F /* OptCountingTime */,
+				AD58AC660A7261B3007E241F /* PeakCentring */,
+				AD58AC6B0A7261BD007E241F /* SinThetaLambda */,
+				AD58AC7E0A726212007E241F /* Asymmetry */,
+				AD58AC8A0A726225007E241F /* 3He NSF */,
+			);
+			path = "Source Code";
+			sourceTree = "<group>";
+		};
+		19C28FB4FE9D528D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D01CCD20486CAD60068D4B7 /* Neutron Scattering-64.xop */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD317D9E2415153800A6AF0B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD6DC4FE26D52BA0004F5225 /* libXOPSupport64.a */,
+				AD317DA52415172900A6AF0B /* Cocoa.framework */,
+				AD317DA3241516FC00A6AF0B /* AudioToolbox.framework */,
+				AD317D9F2415153800A6AF0B /* Carbon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD58ABBC0A7259C9007E241F /* OptCountingTime */ = {
+			isa = PBXGroup;
+			children = (
+				AD58AD330A7267EA007E241F /* OptCountingTime.h */,
+				AD58ABBE0A7259C9007E241F /* OptCountingTimeTbm.c */,
+				AD58ABBF0A7259C9007E241F /* OptCountingTimeTbp.c */,
+				AD58ABC00A7259C9007E241F /* OptCountingTimeTpm.c */,
+				AD58ABC10A7259C9007E241F /* OptCountingTimeTpp.c */,
+			);
+			path = OptCountingTime;
+			sourceTree = "<group>";
+		};
+		AD58AC580A726193007E241F /* CountRate */ = {
+			isa = PBXGroup;
+			children = (
+				AD58AD510A7269C2007E241F /* CountRate.h */,
+				AD58AC590A726193007E241F /* CountRate.c */,
+				AD58AC5A0A726193007E241F /* CountRateDDT.c */,
+				AD58AC5B0A726193007E241F /* CountRateMonitor.c */,
+			);
+			name = CountRate;
+			path = "Source Code/CountRate";
+			sourceTree = SOURCE_ROOT;
+		};
+		AD58AC5F0A72619E007E241F /* FlippingRatio */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5DE640A726F8F002628DE /* FlippingRatio.h */,
+				AD58AC600A72619E007E241F /* FlippingRatio.c */,
+				AD58AC610A72619E007E241F /* FlippingRatioOpt.c */,
+				AD58AC620A72619E007E241F /* FlippingRatioOptDDT.c */,
+			);
+			path = FlippingRatio;
+			sourceTree = "<group>";
+		};
+		AD58AC660A7261B3007E241F /* PeakCentring */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5DF420A7272ED002628DE /* PeakCentring.h */,
+				AD58AC680A7261B3007E241F /* PeakCentringLin.c */,
+				AD58AC670A7261B3007E241F /* PeakCentringGauss.c */,
+			);
+			path = PeakCentring;
+			sourceTree = "<group>";
+		};
+		AD58AC6B0A7261BD007E241F /* SinThetaLambda */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5DFA60A727861002628DE /* SinThetaLambda.h */,
+				AD58ACB50A726383007E241F /* RLparameters.c */,
+				AD58AC6D0A7261BD007E241F /* STLcubic.c */,
+				AD58AC6E0A7261BD007E241F /* STLhexagonal.c */,
+				AD58AC6F0A7261BD007E241F /* STLmonoclinicB.c */,
+				AD58AC700A7261BD007E241F /* STLmonoclinicC.c */,
+				AD58AC710A7261BD007E241F /* STLorthorhombic.c */,
+				AD58AC720A7261BD007E241F /* STLrhombohedral.c */,
+				AD58AC730A7261BD007E241F /* STLtetragonal.c */,
+				AD58AC740A7261BD007E241F /* STLtriclinic.c */,
+			);
+			path = SinThetaLambda;
+			sourceTree = "<group>";
+		};
+		AD58AC7E0A726212007E241F /* Asymmetry */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5E0810A727D11002628DE /* Asymmetry.h */,
+				AD58AC7F0A726212007E241F /* Asymmetry.c */,
+				AD58AC800A726212007E241F /* AsymmetryOpt.c */,
+				AD58AC810A726212007E241F /* AsymmetryOptDDT.c */,
+			);
+			path = Asymmetry;
+			sourceTree = "<group>";
+		};
+		AD58AC8A0A726225007E241F /* 3He NSF */ = {
+			isa = PBXGroup;
+			children = (
+				ADA5E1150A727F77002628DE /* 3He NSF.h */,
+				AD58AC8B0A726225007E241F /* He3Efficiency.c */,
+				ADE2E7340E4627E300EE206B /* He3Efficiency2.c */,
+				AD58AC8C0A726225007E241F /* He3Polarisation.c */,
+				AD58AC8D0A726225007E241F /* He3Transmission.c */,
+			);
+			path = "3He NSF";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		AD58AC0C0A725D6E007E241F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD58AC0F0A725D90007E241F /* Neutron Scattering.h in Headers */,
+				AD58AD340A7267EA007E241F /* OptCountingTime.h in Headers */,
+				AD58AD520A7269C2007E241F /* CountRate.h in Headers */,
+				ADA5DE650A726F8F002628DE /* FlippingRatio.h in Headers */,
+				ADA5DF9C0A72748B002628DE /* PeakCentring.h in Headers */,
+				ADA5E0770A727C73002628DE /* SinThetaLambda.h in Headers */,
+				ADA5E08F0A727D23002628DE /* Asymmetry.h in Headers */,
+				ADA5E1860A728161002628DE /* 3He NSF.h in Headers */,
+				AD3B2D61106A15E400DDA6FF /* Neutron Scattering Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D01CCC60486CAD60068D4B7 /* Neutron Scattering */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FADC23308B4156C00ABE55E /* Build configuration list for PBXNativeTarget "Neutron Scattering" */;
+			buildPhases = (
+				AD58AC0C0A725D6E007E241F /* Headers */,
+				8D01CCC90486CAD60068D4B7 /* Resources */,
+				8D01CCCB0486CAD60068D4B7 /* Sources */,
+				8D01CCCD0486CAD60068D4B7 /* Frameworks */,
+				AD58AC100A725DD5007E241F /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Neutron Scattering";
+			productInstallPath = "$(HOME)/Library/Bundles";
+			productName = "Polarised Neutrons";
+			productReference = 8D01CCD20486CAD60068D4B7 /* Neutron Scattering-64.xop */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		089C1669FE841209C02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					8D01CCC60486CAD60068D4B7 = {
+						DevelopmentTeam = ZEC3W885H6;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "Neutron Scattering" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 089C166AFE841209C02AAC07 /* Polarised Neutrons */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D01CCC60486CAD60068D4B7 /* Neutron Scattering */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D01CCC90486CAD60068D4B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D01CCCA0486CAD60068D4B7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		AD58AC100A725DD5007E241F /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD58AC120A725DE8007E241F /* Neutron Scattering.r in Rez */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D01CCCB0486CAD60068D4B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD58ABA60A72599F007E241F /* Neutron Scattering.c in Sources */,
+				AD58ABE00A7259C9007E241F /* OptCountingTimeTbm.c in Sources */,
+				AD58ABE10A7259C9007E241F /* OptCountingTimeTbp.c in Sources */,
+				AD58ABE20A7259C9007E241F /* OptCountingTimeTpm.c in Sources */,
+				AD58ABE30A7259C9007E241F /* OptCountingTimeTpp.c in Sources */,
+				AD58AC5C0A726193007E241F /* CountRate.c in Sources */,
+				AD58AC5D0A726193007E241F /* CountRateDDT.c in Sources */,
+				AD58AC5E0A726193007E241F /* CountRateMonitor.c in Sources */,
+				AD58AC630A72619E007E241F /* FlippingRatio.c in Sources */,
+				AD58AC640A72619E007E241F /* FlippingRatioOpt.c in Sources */,
+				AD58AC650A72619E007E241F /* FlippingRatioOptDDT.c in Sources */,
+				AD58AC690A7261B3007E241F /* PeakCentringGauss.c in Sources */,
+				AD58AC6A0A7261B3007E241F /* PeakCentringLin.c in Sources */,
+				AD58AC760A7261BD007E241F /* STLcubic.c in Sources */,
+				AD58AC770A7261BD007E241F /* STLhexagonal.c in Sources */,
+				AD58AC780A7261BD007E241F /* STLmonoclinicB.c in Sources */,
+				AD58AC790A7261BD007E241F /* STLmonoclinicC.c in Sources */,
+				AD58AC7A0A7261BD007E241F /* STLorthorhombic.c in Sources */,
+				AD58AC7B0A7261BD007E241F /* STLrhombohedral.c in Sources */,
+				AD58AC7C0A7261BD007E241F /* STLtetragonal.c in Sources */,
+				AD58AC7D0A7261BD007E241F /* STLtriclinic.c in Sources */,
+				AD58AC820A726212007E241F /* Asymmetry.c in Sources */,
+				AD58AC830A726212007E241F /* AsymmetryOpt.c in Sources */,
+				AD58AC840A726212007E241F /* AsymmetryOptDDT.c in Sources */,
+				AD58AC8E0A726225007E241F /* He3Efficiency.c in Sources */,
+				AD58AC8F0A726225007E241F /* He3Polarisation.c in Sources */,
+				AD58AC900A726225007E241F /* He3Transmission.c in Sources */,
+				AD58ACB60A726383007E241F /* RLparameters.c in Sources */,
+				ADE2E7350E4627E300EE206B /* He3Efficiency2.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C167DFE841241C02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AD317DA72415173600A6AF0B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4FADC23408B4156C00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = ZEC3W885H6;
+				EXPORTED_SYMBOLS_FILE = ./Exports.exp;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neutron Scattering Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GENERATE_PKGINFO = Yes;
+				GENERATE_PKGINFO_FILE = NO;
+				HEADER_SEARCH_PATHS = "../../XOPSupport-8.00/";
+				INFOPLIST_FILE = Info64.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = "../../XOPSupport-8.00/Xcode";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_REZFLAGS = "-i ../../XOPSupport-8.00";
+				PRODUCT_BUNDLE_IDENTIFIER = eu.ill.sane.xopns;
+				PRODUCT_MODULE_NAME = "NeutronScattering-64";
+				PRODUCT_NAME = "Neutron Scattering-64";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wno-parentheses";
+				WRAPPER_EXTENSION = xop;
+				ZERO_LINK = NO;
+			};
+			name = Debug;
+		};
+		4FADC23808B4156C00ABE55E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZEC3W885H6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../../XOPSupport-8.00";
+				INFOPLIST_FILE = Info64.plist;
+				LIBRARY_SEARCH_PATHS = "../../XOPSupport-8.00/Xcode";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_MODULE_NAME = "";
+				PRODUCT_NAME = "";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../XOPSupport-8.00";
+			};
+			name = Debug;
+		};
+		AD317D9C2415141800A6AF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = ZEC3W885H6;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "../../XOPSupport-8.00";
+				INFOPLIST_FILE = Info64.plist;
+				LIBRARY_SEARCH_PATHS = "../../XOPSupport-8.00/Xcode";
+				LIBRARY_STYLE = Bundle;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "";
+				PRODUCT_MODULE_NAME = "";
+				PRODUCT_NAME = "";
+				SDKROOT = macosx;
+				USER_HEADER_SEARCH_PATHS = "../../XOPSupport-8.00";
+			};
+			name = Release;
+		};
+		AD317D9D2415141800A6AF0B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = x86_64;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = ZEC3W885H6;
+				EXPORTED_SYMBOLS_FILE = ./Exports.exp;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Neutron Scattering Prefix.pch";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				GCC_WARN_UNUSED_PARAMETER = YES;
+				GCC_WARN_UNUSED_VALUE = YES;
+				GENERATE_PKGINFO = Yes;
+				GENERATE_PKGINFO_FILE = NO;
+				HEADER_SEARCH_PATHS = "../../XOPSupport-8.00/";
+				INFOPLIST_FILE = Info64.plist;
+				INSTALL_PATH = "$(HOME)/Library/Bundles";
+				LIBRARY_SEARCH_PATHS = "../../XOPSupport-8.00/Xcode";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				OTHER_REZFLAGS = "-i ../../XOPSupport-8.00";
+				PRODUCT_BUNDLE_IDENTIFIER = eu.ill.sane.xopns;
+				PRODUCT_MODULE_NAME = "NeutronScattering-64";
+				PRODUCT_NAME = "Neutron Scattering-64";
+				SDKROOT = macosx;
+				WARNING_CFLAGS = "-Wno-parentheses";
+				WRAPPER_EXTENSION = xop;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FADC23308B4156C00ABE55E /* Build configuration list for PBXNativeTarget "Neutron Scattering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC23408B4156C00ABE55E /* Debug */,
+				AD317D9D2415141800A6AF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4FADC23708B4156C00ABE55E /* Build configuration list for PBXProject "Neutron Scattering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FADC23808B4156C00ABE55E /* Debug */,
+				AD317D9C2415141800A6AF0B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 089C1669FE841209C02AAC07 /* Project object */;
+}

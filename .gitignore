@@ -50,3 +50,11 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+Archives
+Notarized
+*.dmg
+*.zip
+.svn
+.DS_Store
+Debug
+Release
