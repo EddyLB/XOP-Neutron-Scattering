@@ -149,10 +149,10 @@ RegisterFunction()
 		case 37:					/* AsymmetryOptSDevDDT(Npp, Nbp, Npm, Nbm, Tpp, Tbp, Tpm, Tbm, Mp, Mb, a, b, aSDev, bSDev) */
 			return((XOPIORecResult)AsymmetryOptDDTSDev);
 			break;
-		case 38:					/* He3Efficiency(p, l, v, lbda, P3He) */
+		case 38:					/* He3Efficiency(p, T, l, lbda, P3He) */
 			return((XOPIORecResult)He3Efficiency);
 			break;
-		case 39:					/* He3EfficiencySDev(p, l, v, lbda, P3He, pSDev, lSDev, pSDev, lbdaSDev, P3HeSDev) */
+		case 39:					/* He3EfficiencySDev(p, T, l, lbda, P3He, pSDev, TSDev, lSDev, lbdaSDev, P3HeSDev) */
 			return((XOPIORecResult)He3EfficiencySDev);
 			break;
 		case 40:					/* He3Efficiency2(M10, M20, M1, M2) */
@@ -161,16 +161,16 @@ RegisterFunction()
 		case 41:					/* He3EfficiencySDev(M10, M20, M1, M2) */
 			return((XOPIORecResult)He3Efficiency2SDev);
 			break;
-		case 42:					/* He3Transmission(p, l, v, lbda, P3He) */
+		case 42:					/* He3Transmission(p, T, l, lbda, P3He) */
 			return((XOPIORecResult)He3Transmission);
 			break;
-		case 43:					/* He3TransmissionSDev(p, l, v, lbda, P3He, pSDev, lSDev, vSDev, lbdaSDev, P3HeSDev) */
+		case 43:					/* He3TransmissionSDev(p, T, l, lbda, P3He, pSDev, TSDev, lSDev, lbdaSDev, P3HeSDev) */
 			return((XOPIORecResult)He3TransmissionSDev);
 			break;
-		case 44:					/* He3Polarisation(p, l, v, lbda, Pn0, Pn) */
+		case 44:					/* He3Polarisation(p, T, l, lbda, Pn0, Pn) */
 			return((XOPIORecResult)He3Polarisation);
 			break;
-		case 45:					/* He3PolarisationSDev(p, l, v, lbda, Pn0, Pn, pSDev, lSDev, vSDev, lbdaSDev, P3HeSDev, Pn0SDev, PnSDev) */
+		case 45:					/* He3PolarisationSDev(p, T, l, lbda, Pn0, Pn, pSDev, TSDev, lSDev, vSDev, lbdaSDev, P3HeSDev, Pn0SDev, PnSDev) */
 			return((XOPIORecResult)He3PolarisationSDev);
 			break;
 	}
@@ -307,10 +307,10 @@ DoFunction()
 		case 37:					/* AsymmetryOptSDevDDT(Npp, Nbp, Npm, Nbm, Tpp, Tbp, Tpm, Tbm, Mp, Mb, a, b, aSDev, bSDev) */
 			err = AsymmetryOptDDTSDev((AsymmetryOptDDTSDevParams*)p);
 			break;
-		case 38:					/* He3Efficiency(p, l, v, lbda, P3He) */
+		case 38:					/* He3Efficiency(p, T, l lbda, P3He) */
 			err = He3Efficiency((He3EfficiencyParams*)p);
 			break;
-		case 39:					/* He3EfficiencySDev(p, l, v, lbda, P3He, pSDev, lSDev, vSDev, lbdaSDev, P3HeSDev) */
+		case 39:					/* He3EfficiencySDev(p, T, l, lbda, P3He, pSDev, TSDev, lSDev, lbdaSDev, P3HeSDev) */
 			err = He3EfficiencySDev((He3EfficiencySDevParams*)p);
 			break;
 		case 40:					/* He3Efficiency2(M10, M20, M1, M2) */
@@ -319,16 +319,16 @@ DoFunction()
 		case 41:					/* He3EfficiencySDev(M10, M20, M1, M2) */
 			err = He3Efficiency2SDev((He3Efficiency2Params*)p);
 			break;
-		case 42:					/* He3Transmission(p, l, v, lbda, P3He) */
+		case 42:					/* He3Transmission(p, T, l, lbda, P3He) */
 			err = He3Transmission((He3TransmissionParams*)p);
 			break;
-		case 43:					/* He3TransmissionSDev(p, l, v, lbda, P3He, pSDev, lSDev, vSDev, lbdaSDev, P3HeSDev) */
+		case 43:					/* He3TransmissionSDev(p, T, l, lbda, P3He, pSDev, TSDev, lSDev, lbdaSDev, P3HeSDev) */
 			err = He3TransmissionSDev((He3TransmissionSDevParams*)p);
 			break;
-		case 44:					/* He3Polarisation(p, l, v, lbda, Pn0, Pn) */
+		case 44:					/* He3Polarisation(p, T, l, lbda, Pn0, Pn) */
 			err = He3Polarisation((He3PolarisationParams*)p);
 			break;
-		case 45:					/* He3PolarisationSDev(p, l, v, lbda, Pn0, Pn, pSDev, lSDev, vSDev, lbdaSDev, P3HeSDev, Pn0SDev, PnSDev) */
+		case 45:					/* He3PolarisationSDev(p, T, l, lbda, Pn0, Pn, pSDev, TSDev, lSDev, lbdaSDev, P3HeSDev, Pn0SDev, PnSDev) */
 			err = He3PolarisationSDev((He3PolarisationSDevParams*)p);
 			break;
 	}

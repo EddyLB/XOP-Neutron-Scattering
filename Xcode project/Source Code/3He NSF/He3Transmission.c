@@ -11,10 +11,6 @@ int He3Transmission(He3TransmissionParams* param)
     double T = param->t;            // provided in Kelvin
 	double p = param->p;            // provided in bar
 	
-	const double Na = 6.0221367e23;
-    const double a = 0.082096;
-	const double sigma = 5333e-24/1.8;
-	
     double opacity = p * Na / (a * T) * l * sigma * lbda;
 
 	param->result = exp(-opacity) * cosh(opacity * P3He);
@@ -37,11 +33,6 @@ int He3TransmissionSDev(He3TransmissionSDevParams* param)
     double VT = sqr(param->tSDev);
 	double Vp = sqr(param->pSDev);
 		
-	const double Na = 6.0221367e23;
-    const double a = 0.082096;
-	const double sigma = 5333e-24/1.8;
-    const double Vsigma = sqr(7)/1.8;
-
     double opacity = p * Na / (a * T) * l * sigma * lbda;
     
     double arg1 = sqr(T)*Vp + sqr(p)*VT;
@@ -73,7 +64,7 @@ int He3TransmissionSDev(He3TransmissionSDevParams* param)
     arg3 += sqr(l*p*T*lbda)*Vsigma;
     arg3 *= P3He*sinh(2 * opacity * P3He);
 	
-	param->result = sqr(Na) * exp(-2 * opacity) * (arg1 + arg2 - arg3) / sqr(a*sqr(T));
+	param->result = sqrt(sqr(Na) * exp(-2 * opacity) * (arg1 + arg2 - arg3) / sqr(a*sqr(T)));
 
 	return err;					/* XFunc error code */
 }

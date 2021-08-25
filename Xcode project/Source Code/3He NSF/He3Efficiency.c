@@ -11,10 +11,6 @@ int He3Efficiency(He3EfficiencyParams* param)
     double T = param->t;            // provided in Kelvin
     double p = param->p;            // provided in bar
 
-	const double Na = 6.0221367e23;
-    const double a = 0.082096;
-	const double sigma = 5333.0e-24/1.8;    // from https://www.ncnr.nist.gov/resources/n-lengths/elements/he.html
-	
     double opacity = p * Na / (a * T) * l * sigma * lbda;
 	double arg = opacity * P3He;
 	
@@ -37,11 +33,6 @@ int He3EfficiencySDev(He3EfficiencySDevParams* param)
 	double Vl = sqr(param->lSDev);
     double VT = sqr(param->tSDev);
 	double Vp = sqr(param->pSDev);
-	
-	const double Na = 6.0221367e23;
-    const double a = 0.082096*1000;         // See experiment file prepared from WolframAlpha
-    const double sigma = 5333.0e-24/1.8;    // from https://www.ncnr.nist.gov/resources/n-lengths/elements/he.html
-    const double Vsigma = sqr(7)/1.8;
 	
     double opacity = p * Na / (a * T) * l * sigma * lbda;
     double arg = sqr(T)*VP3He + sqr(P3He)*VT;

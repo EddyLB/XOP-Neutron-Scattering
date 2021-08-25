@@ -12,15 +12,17 @@ int He3Polarisation(He3PolarisationParams* param)
     double T = param->t;            // provided in Kelvin
     double p = param->p;            // provided in bar
 
-	const double Na = 6.0221367e23;
-    const double a = 0.082096;
-	const double sigma = 5333e-24/1.8;
-	
     double opacity = p * Na / (a * T) * l * sigma * lbda;
 
-	if (Pn0 == 0.0) {
+    if ((Pn0 < 0) || (Pn0 > 1)) {
+        SetNaN64(&param->result);    // returns NaN
+    }
+	else if (Pn0 == 0.0) {
         param->result = atanh(Pn) / opacity;
 	}
+    else if ((Pn < 0) || (Pn > 1) || (Pn0 < Pn)) {
+        SetNaN64(&param->result);    // returns NaN
+    }
     else {
         param->result = log((Pn0 + Pn)/(Pn0 - Pn)) / (2 * opacity);
     }
@@ -45,16 +47,11 @@ int He3PolarisationSDev(He3PolarisationSDevParams* param)
     double VT = sqr(param->tSDev);
 	double Vp = sqr(param->pSDev);
 	
-	const double Na = 6.0221367e23;
-    const double a = 0.082096;
-	const double sigma = 5333e-24/1.8;
-    const double Vsigma = sqr(7)/1.8;
-
     double arg = 0;
-    if ((Pn < 0) || (Pn0 < Pn)) {
+    if ((Pn0 < 0) || (Pn0 > 1)) {
         SetNaN64(&param->result);    // returns NaN
     }
-	else if (Pn0 == 0.0) {
+    else if (Pn0 == 0.0) {
         arg = sqr(lbda)*Vsigma + sqr(sigma)*Vlbda;
         arg *= sqr(T);
         arg += sqr(lbda*sigma)*VT;
@@ -62,11 +59,15 @@ int He3PolarisationSDev(He3PolarisationSDevParams* param)
         arg += sqr(T*lbda*sigma)*Vp;
         arg *= sqr(l);
         arg += sqr(p*T*lbda*sigma)*Vl;
-        arg *= sqr(atanh(Pn)) * sqr((sqr(Pn) - 1));
+        arg *= sqr(atanh(Pn) * (sqr(Pn) - 1));
         arg += sqr(l*p*T*lbda*sigma)*VPn;
         arg *= sqr(a);
-        arg /= sqr(Na*(sqr(Pn) - 1)*sqr(l*lbda*sigma));
-	}
+        arg /= sqr(Na*(sqr(Pn) - 1)*sqr(l*p*lbda*sigma));
+        param->result = sqrt(arg);
+    }
+    else if ((Pn < 0) || (Pn > 1) || (Pn0 < Pn)) {
+        SetNaN64(&param->result);    // returns NaN
+    }
     else {
         arg = sqr(T)*Vp + sqr(p)*VT;
         arg *= sqr(lbda);
@@ -77,10 +78,10 @@ int He3PolarisationSDev(He3PolarisationSDevParams* param)
         arg += sqr(p*T*lbda*sigma)*Vl;
         arg *= sqr(log(1 + 2*Pn/(Pn0 - Pn)));
         arg += (4 * sqr(l*p*T*lbda*sigma) * (sqr(Pn0)*VPn + sqr(Pn)*VPn0)) / sqr(sqr(Pn) - sqr(Pn0));
+        arg *= sqr(a);
         arg /= 4*sqr(Na * sqr(l*p*sigma*lbda));
+        param->result = sqrt(arg);
     }
-	
-	param->result = sqrt(arg);
 
 	return err;					/* XFunc error code */
 }

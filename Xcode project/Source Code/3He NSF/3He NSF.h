@@ -69,13 +69,12 @@ struct He3PolarisationSDevParams{
 		double PnSDev;
 		double Pn0SDev;
 		double lbdaSDev;
-        double tSDev;
 		double lSDev;
+        double tSDev;
 		double pSDev;
 		double Pn;
 		double Pn0;
 		double lbda;
-        double v;
 		double l;
         double t;
 		double p;
@@ -129,3 +128,9 @@ int He3PolarisationSDev(He3PolarisationSDevParams* p);
 
 int He3Transmission(He3TransmissionParams* p);
 int He3TransmissionSDev(He3TransmissionSDevParams* p);
+
+// Contants
+#define Na 6.0221367e23
+#define a 0.082096e3          // See experiment file prepared from WolframAlpha
+#define sigma 5333.0e-24/1.8  // from https://www.ncnr.nist.gov/resources/n-lengths/elements/he.html
+#define Vsigma 1.51235e-47    // i.e. sqr(7e-24/1.8)
