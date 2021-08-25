@@ -4,6 +4,7 @@ Notarized
 *.zip
 .svn
 .DS_Store
+Build
 Debug
 Release
 DerivedData
