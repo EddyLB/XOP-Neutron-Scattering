@@ -9,7 +9,7 @@
 1100 STR#					// Custom error messages.
 BEGIN
 		/* [1] */
-		"Neutron Scattering XOP requires Igor 5.00 or later.\0",
+		"Neutron Scattering XOP requires Igor 8.04 or later.\0",
 		/* [2] */
 		"Null Counting Time.\0",
 		/* [3] */
@@ -44,8 +44,8 @@ END
 BEGIN
 	XOP_VERSION,					// Version number of host XOP system.
 	DEV_SYS_CODE,					// Code for development system used to make XOP.
-	0,								// Obsolete - set to zero.
-	0,								// Obsolete - set to zero.
+	XOP_FEATURE_FLAGS,				// Tells Igor about XOP features.
+	XOPI_RESERVE,					// Reserved - must be zero.
 	XOP_TOOLKIT_VERSION				// XOP Toolkit version.
 END
 
@@ -520,6 +520,7 @@ BEGIN
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
+			NT_FP64,
 			0,								/* 0 terminates list of parameter types */
 			
 		"He3EfficiencySDev\0",				/* function name */
@@ -529,7 +530,9 @@ BEGIN
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
+			NT_FP64,
 			NT_FP64,						/* parameter types */
+			NT_FP64,
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
@@ -560,6 +563,7 @@ BEGIN
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
+			NT_FP64,
 			0,								/* 0 terminates list of parameter types */
 			
 		"He3TransmissionSDev\0",				/* function name */
@@ -569,7 +573,9 @@ BEGIN
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
+			NT_FP64,
 			NT_FP64,						/* parameter types */
+			NT_FP64,
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
@@ -583,6 +589,7 @@ BEGIN
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
+			NT_FP64,
 			0,								/* 0 terminates list of parameter types */
 			
 		"He3PolarisationSDev\0",				/* function name */
@@ -592,7 +599,9 @@ BEGIN
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
+			NT_FP64,
 			NT_FP64,						/* parameter types */
+			NT_FP64,
 			NT_FP64,
 			NT_FP64,
 			NT_FP64,
