@@ -2,6 +2,14 @@
 #include "../Neutron Scattering.h"
 #include "3He NSF.h"
 
+#ifdef _WINDOWS_
+	// atanh() not implemented in VC2010
+	double atanh(double x)
+	{
+		return (log(1+x) - log(1-x))/2;
+	}
+#endif
+
 int He3Polarisation(He3PolarisationParams* param)
 {
 	int err = 0;

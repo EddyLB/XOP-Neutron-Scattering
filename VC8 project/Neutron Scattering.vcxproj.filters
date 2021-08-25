@@ -152,6 +152,9 @@
     <ClInclude Include="..\Xcode project\Source Code\SinThetaLambda\SinThetaLambda.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\XOPSupport-8.00\XOPStandardHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Neutron Scattering WinCustom.rc">
@@ -162,7 +165,7 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Library Include="..\..\XOP Toolkit 5\IgorXOPs5\XOPSupport\IGOR.lib" />
-    <Library Include="..\..\XOP Toolkit 5\IgorXOPs5\XOPSupport\VC8\XOPSupport.lib" />
+    <Library Include="..\..\XOPSupport-8.00\VC\XOPSupport.lib" />
+    <Library Include="..\..\XOPSupport-8.00\VC\XOPSupport64.lib" />
   </ItemGroup>
 </Project>
