@@ -7,14 +7,16 @@ int He3Efficiency(He3EfficiencyParams* param)
 	int err = 0;
 	double P3He = param->P3He;
     double lbda = param->lbda;      // provided in Å
-    double v = param->v * 1000;     // provided in liter
     double l = param->l;            // provided in cm
+    double T = param->t;            // provided in Kelvin
     double p = param->p;            // provided in bar
 
 	const double Na = 6.0221367e23;
+    const double a = 0.082096;
 	const double sigma = 5333.0e-24/1.8;    // from https://www.ncnr.nist.gov/resources/n-lengths/elements/he.html
 	
-	double arg = p * Na / v * l * sigma * lbda * P3He;
+    double opacity = p * Na / (a * T) * l * sigma * lbda;
+	double arg = opacity * P3He;
 	
 	param->result = tanh(arg);
 
@@ -27,26 +29,33 @@ int He3EfficiencySDev(He3EfficiencySDevParams* param)
 	int err = 0;
 	double P3He = param->P3He;
     double lbda = param->lbda;              // provided in Å
-    double v = param->v * 1000;             // provided in liter
     double l = param->l;                    // provided in cm
+    double T = param->t;                    // provided in Kelvin
     double p = param->p;                    // provided in bar
 	double VP3He = sqr(param->P3HeSDev);
 	double Vlbda = sqr(param->lbdaSDev);
-    double Vv = sqr(param->vSDev * 1000);
 	double Vl = sqr(param->lSDev);
+    double VT = sqr(param->tSDev);
 	double Vp = sqr(param->pSDev);
 	
 	const double Na = 6.0221367e23;
+    const double a = 0.082096*1000;         // See experiment file prepared from WolframAlpha
     const double sigma = 5333.0e-24/1.8;    // from https://www.ncnr.nist.gov/resources/n-lengths/elements/he.html
+    const double Vsigma = sqr(7)/1.8;
 	
-	double arg = Vv*sqr(lbda) + Vlbda*sqr(sigma);
-	arg *= sqr(P3He);
-	arg += VP3He*sqr(lbda*sigma);
-	arg *= sqr(p);
-	arg += Vp*sqr(P3He*lbda*sigma);
-	arg *= sqr(l);
-	arg += Vl*sqr(p*P3He*lbda*sigma);
-	arg *= sqr(Na) / (sqr(v*sqr(cosh(p*Na/v*l*sigma*lbda*P3He))));
+    double opacity = p * Na / (a * T) * l * sigma * lbda;
+    double arg = sqr(T)*VP3He + sqr(P3He)*VT;
+    arg *= sqr(lbda);
+    arg += sqr(P3He*T)*Vlbda;
+    arg *= sqr(sigma);
+    arg += sqr(P3He*T*lbda)*Vsigma;
+    arg *= sqr(p);
+    arg += sqr(P3He*T*lbda*sigma)*Vp;
+    arg *= sqr(l);
+    arg += sqr(p*P3He*T*lbda*sigma)*Vl;
+    arg *= sqr(Na);
+    arg /= sqr(sqr(cosh(opacity * P3He)));
+    arg /= sqr(a*sqr(T));
 	
 	param->result = sqrt(arg);
 
