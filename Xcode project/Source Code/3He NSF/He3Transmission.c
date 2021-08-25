@@ -7,16 +7,17 @@ int He3Transmission(He3TransmissionParams* param)
 	int err = 0;
 	double P3He = param->P3He;
 	double lbda = param->lbda;      // provided in Å
-    double v = param->v * 1000;     // provided in liter
 	double l = param->l;            // provided in cm
+    double T = param->t;            // provided in Kelvin
 	double p = param->p;            // provided in bar
 	
 	const double Na = 6.0221367e23;
+    const double a = 0.082096;
 	const double sigma = 5333e-24/1.8;
 	
-	double arg = p * Na / v * l * sigma * lbda;
-	
-	param->result = exp(-arg) * cosh(arg*P3He);
+    double opacity = p * Na / (a * T) * l * sigma * lbda;
+
+	param->result = exp(-opacity) * cosh(opacity * P3He);
 
 	return err;					/* XFunc error code */
 }
@@ -27,38 +28,52 @@ int He3TransmissionSDev(He3TransmissionSDevParams* param)
 	int err = 0;
 	double P3He = param->P3He;
     double lbda = param->lbda;              // provided in Å
-    double v = param->v * 1000;             // provided in liter
     double l = param->l;                    // provided in cm
+    double T = param->t;                    // provided in Kelvin
     double p = param->p;                    // provided in bar
 	double VP3He = sqr(param->P3HeSDev);
 	double Vlbda = sqr(param->lbdaSDev);
-    double Vv = sqr(param->vSDev * 1000);
 	double Vl = sqr(param->lSDev);
+    double VT = sqr(param->tSDev);
 	double Vp = sqr(param->pSDev);
-	
-	double arg, arg2, arg3, temp;
-	
+		
 	const double Na = 6.0221367e23;
+    const double a = 0.082096;
 	const double sigma = 5333e-24/1.8;
-	
-	temp = sqr(p)*(Vv*sqr(lbda)+Vlbda*sqr(sigma));
-	arg = Vl*sqr(p*lbda*sigma) + sqr(l)*(Vp*sqr(lbda*sigma) + temp);
-	arg *= sqr(cosh(Na*l*p*P3He*lbda*sigma/v));
+    const double Vsigma = sqr(7)/1.8;
 
-	temp = VP3He*sqr(lbda*sigma);
-	temp += sqr(P3He)*(Vv*sqr(lbda) + Vlbda*sqr(sigma));
-	temp *= sqr(p);
-	arg2 = Vl*sqr(p*P3He*lbda*sigma);
-	arg2 += sqr(l)*(Vp*sqr(P3He*lbda*sigma) + temp);
-	arg2 *= sqr(sinh(l*Na*p*P3He*lbda*sigma/v));
-
-	arg3 = Vl*sqr(p*lbda*sigma);
-	temp = Vp*sqr(lbda*sigma);
-	temp += sqr(p)*(Vv*sqr(lbda) + Vlbda*sqr(sigma));
-	arg3 += sqr(l)*temp;
-	arg3 *= P3He*sinh(2*l*Na*p*P3He*lbda*sigma/v);
+    double opacity = p * Na / (a * T) * l * sigma * lbda;
+    
+    double arg1 = sqr(T)*Vp + sqr(p)*VT;
+    arg1 *= sqr(lbda);
+    arg1 += sqr(p*T)*Vlbda;
+    arg1 *= sqr(sigma);
+    arg1 += sqr(p*T*lbda)*Vsigma;
+    arg1 *= sqr(l);
+    arg1 += sqr(p*T*lbda*sigma)*Vl;
+    arg1 *= sqr(cosh(opacity * P3He));
+    
+    double arg2 = sqr(p)*Vl + sqr(l)*Vp;
+    arg2 *= sqr(P3He);
+    arg2 += sqr(l*p)*VP3He;
+    arg2 *= sqr(T);
+    arg2 += sqr(l*p*P3He)*VT;
+    arg2 *= sqr(lbda);
+    arg2 += sqr(l*p*P3He*T)*Vlbda;
+    arg2 *= sqr(sigma);
+    arg2 += sqr(l*p*P3He*T*lbda)*Vsigma;
+    arg2 *= sqr(sinh(opacity * P3He));
+    
+    double arg3 = sqr(p)*Vl + sqr(l)*Vp;
+    arg3 *= sqr(T);
+    arg3 += sqr(l*p)*VT;
+    arg3 *= sqr(lbda);
+    arg3 += sqr(l*p*T)*Vlbda;
+    arg3 *= sqr(sigma);
+    arg3 += sqr(l*p*T*lbda)*Vsigma;
+    arg3 *= P3He*sinh(2 * opacity * P3He);
 	
-	param->result = Na/v*exp(-l*Na*p*lbda*sigma/v)*sqrt(arg+arg2-arg3);
+	param->result = sqr(Na) * exp(-2 * opacity) * (arg1 + arg2 - arg3) / sqr(a*sqr(T));
 
 	return err;					/* XFunc error code */
 }

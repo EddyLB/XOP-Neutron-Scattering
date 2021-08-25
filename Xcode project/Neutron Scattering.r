@@ -6,13 +6,13 @@
 resource 'vers' (1) {                        /* XOP version info */
     0x01, 0x16, final, 0x00, 0,              /* version bytes and country integer */
     "1.22",
-    "1.22, Copyright 2000-2021 ILL/SANE, all rights reserved."
+    "1.22, © 2000-2021 ILL/SANE, all rights reserved."
 };
 
 resource 'vers' (2) {                        /* Igor version info */
     0x08, 0x04, release, 0x00, 0,            /* version bytes and country integer */
     "8.04",
-    "(for Igor 8.04 or later)"
+    "(for Igor Pro 8.04 or later)"
 };
 
 resource 'STR#' (1100) {					/* custom error messages */

@@ -11,8 +11,8 @@
 struct He3EfficiencyParams {
 		double P3He;
 		double lbda;
-        double v;
 		double l;
+        double t;
 		double p;
 		double result;
 };
@@ -24,13 +24,13 @@ typedef struct He3EfficiencyParams *He3EfficiencyParamsPtr;
 struct He3EfficiencySDevParams {
 		double P3HeSDev;
 		double lbdaSDev;
-        double vSDev;
 		double lSDev;
+        double tSDev;
 		double pSDev;
 		double P3He;
 		double lbda;
-        double v;
 		double l;
+        double t;
 		double p;
 		double result;
 };
@@ -55,8 +55,8 @@ struct He3PolarisationParams{
 		double Pn;
 		double Pn0;
 		double lbda;
-        double v;
 		double l;
+        double t;
 		double p;
 		double result;
 };
@@ -69,7 +69,7 @@ struct He3PolarisationSDevParams{
 		double PnSDev;
 		double Pn0SDev;
 		double lbdaSDev;
-        double vSDev;
+        double tSDev;
 		double lSDev;
 		double pSDev;
 		double Pn;
@@ -77,6 +77,7 @@ struct He3PolarisationSDevParams{
 		double lbda;
         double v;
 		double l;
+        double t;
 		double p;
 		double result;
 };
@@ -88,8 +89,8 @@ typedef struct He3PolarisationSDevParams *He3PolarisationSDevParamsPtr;
 struct He3TransmissionParams{
 		double P3He;
 		double lbda;
-        double v;
 		double l;
+        double t;
 		double p;
 		double result;
 };
@@ -101,13 +102,13 @@ typedef struct He3TransmissionParams *He3TransmissionParamsPtr;
 struct He3TransmissionSDevParams{
 		double P3HeSDev;
 		double lbdaSDev;
-        double vSDev;
 		double lSDev;
+        double tSDev;
 		double pSDev;
 		double P3He;
 		double lbda;
-        double v;
 		double l;
+        double t;
 		double p;
 		double result;
 };
