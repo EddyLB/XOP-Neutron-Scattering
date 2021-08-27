@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{2e5f15e4-4e70-4144-bbb0-42edd911b4b5}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Source Files\CountRate">
+      <UniqueIdentifier>{5f05dd08-88a5-4f23-8084-966e7583afa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Asymmetry">
+      <UniqueIdentifier>{18cc333a-100c-4d0e-a23b-08d57300588f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3He NSF">
+      <UniqueIdentifier>{bb9af53e-798a-4b4b-9135-04e71fda4380}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\FlippingRatio">
+      <UniqueIdentifier>{120702a3-78b5-4d2e-a106-0b6154c2f34c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\OptCountingTime">
+      <UniqueIdentifier>{c6b4d17d-aace-46c1-9103-984705301485}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\PeakCentring">
+      <UniqueIdentifier>{cb55c7b8-49fa-40da-b005-a7a237fca2e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\SinThetaLbda">
+      <UniqueIdentifier>{61a617d5-c05e-4aa9-9337-323634831789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{c2116976-d4d5-4b02-9198-4d04a9d01580}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{1f74b25b-cde5-4903-91f5-6a3aeb566143}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Xcode project\Source Code\Neutron Scattering.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\CountRate\CountRate.c">
+      <Filter>Source Files\CountRate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\CountRate\CountRateDDT.c">
+      <Filter>Source Files\CountRate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\CountRate\CountRateMonitor.c">
+      <Filter>Source Files\CountRate</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\Asymmetry\Asymmetry.c">
+      <Filter>Source Files\Asymmetry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\Asymmetry\AsymmetryOpt.c">
+      <Filter>Source Files\Asymmetry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\Asymmetry\AsymmetryOptDDT.c">
+      <Filter>Source Files\Asymmetry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\3He NSF\He3Efficiency.c">
+      <Filter>Source Files\3He NSF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\3He NSF\He3Efficiency2.c">
+      <Filter>Source Files\3He NSF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\3He NSF\He3Polarisation.c">
+      <Filter>Source Files\3He NSF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\3He NSF\He3Transmission.c">
+      <Filter>Source Files\3He NSF</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\FlippingRatio\FlippingRatio.c">
+      <Filter>Source Files\FlippingRatio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\FlippingRatio\FlippingRatioOpt.c">
+      <Filter>Source Files\FlippingRatio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\FlippingRatio\FlippingRatioOptDDT.c">
+      <Filter>Source Files\FlippingRatio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\OptCountingTime\OptCountingTimeTbm.c">
+      <Filter>Source Files\OptCountingTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\OptCountingTime\OptCountingTimeTbp.c">
+      <Filter>Source Files\OptCountingTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\OptCountingTime\OptCountingTimeTpm.c">
+      <Filter>Source Files\OptCountingTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\OptCountingTime\OptCountingTimeTpp.c">
+      <Filter>Source Files\OptCountingTime</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\PeakCentring\PeakCentringGauss.c">
+      <Filter>Source Files\PeakCentring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\PeakCentring\PeakCentringLin.c">
+      <Filter>Source Files\PeakCentring</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\RLparameters.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLcubic.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLhexagonal.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLmonoclinicB.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLmonoclinicC.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLorthorhombic.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLrhombohedral.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLtetragonal.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Xcode project\Source Code\SinThetaLambda\STLtriclinic.c">
+      <Filter>Source Files\SinThetaLbda</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Xcode project\Source Code\3He NSF\3He NSF.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\Asymmetry\Asymmetry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\CountRate\CountRate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\FlippingRatio\FlippingRatio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\Neutron Scattering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\OptCountingTime\OptCountingTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\PeakCentring\PeakCentring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Xcode project\Source Code\SinThetaLambda\SinThetaLambda.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\XOPSupport-8.00\XOPStandardHeaders.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Neutron Scattering WinCustom.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+    <ResourceCompile Include="Neutron Scattering.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\XOPSupport-8.00\IGOR.lib" />
+    <Library Include="..\..\XOPSupport-8.00\IGOR64.lib" />
+    <Library Include="..\..\XOPSupport-8.00\VC\XOPSupport.lib" />
+    <Library Include="..\..\XOPSupport-8.00\VC\XOPSupport64.lib" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,613 @@
+/*	Neutron Scattering WinCustom.rc -- resources for "Neutron Scattering" XOP on Windows
+
+	This file is compiled by the resource compiler and creates XOP-specific
+	resources that IGOR looks for in an XOP module.
+*/
+
+#include "XOPResources.h"			// Defines XOP-specific symbols.
+
+1100 STR#					// Custom error messages.
+BEGIN
+		/* [1] */
+		"Neutron Scattering XOP requires Igor 8.04 or later.\0",
+		/* [2] */
+		"Null Counting Time.\0",
+		/* [3] */
+		"Null Count Rate.\0",
+		/* [4] */
+		"Null Monitor Value: Beam may not be opened !\0",
+		/* [5] */
+		"Infinite Flipping Ratio.\0",
+		/* [6] */
+		"Infinite Flipping Ratio Standard Deviation.\0",
+		/* [7] */
+		"Infinite Counting Time.\0",
+		/* [8] */
+		"Infinite Counting Time Standard Deviation.\0",
+		/* [9] */
+		"Undefined Detector Position.\0",
+		/* [10] */
+		"Infinite Asymmetry.\0",
+		/* [11] */
+		"Infinite Asymmetry Standard Deviation.\0",
+		/* [12] */
+		"Undefined Count Rate.\0",
+		/* [13] */
+		"Wrong lattice parameters - Det[G] = 0.\0",
+
+	0,								// NOTE: 0 required to terminate the resource.
+END
+
+// no menu item
+
+1100 XOPI							// XOPI - Describes general XOP properties to IGOR. 
+BEGIN
+	XOP_VERSION,					// Version number of host XOP system.
+	DEV_SYS_CODE,					// Code for development system used to make XOP.
+	XOP_FEATURE_FLAGS,				// Tells Igor about XOP features.
+	XOPI_RESERVED,					// Reserved - must be zero.
+	XOP_TOOLKIT_VERSION				// XOP Toolkit version.
+END
+
+1100 XOPF							// XOPF - Describes general XOP properties to IGOR. 
+BEGIN
+		"CountRate\0",						/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"CountRateSDev\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"CountRateDDT\0",						/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"CountRateDDTSDev\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"CountRateMonitor\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"CountRateMonitorSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"FlippingRatio\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"FlippingRatioSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"FlippingRatioOpt\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"FlippingRatioOptSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"FlippingRatioOptDDT\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"FlippingRatioOptDDTSDev\0",			/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTpp\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTbp\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTpm\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTbm\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTppSDev\0",			/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTbpSDev\0",			/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTpmSDev\0",			/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"OptCountingTimeTbmSDev\0",			/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"PeakCentringLin\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"PeakCentringLinSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"PeakCentringGauss\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"PeakCentringGaussSDev\0",			/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLcubic\0",							/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLhexagonal\0",						/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLrhombohedral\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLtetragonal\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLorthorhombic\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLmonoclinicB\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLmonoclinicC\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"STLtriclinic\0",						/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"Asymmetry\0",						/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"AsymmetrySDev\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"AsymmetryOpt\0",						/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"AsymmetryOptSDev\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"AsymmetryOptDDT\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"AsymmetryOptDDTSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3Efficiency\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3EfficiencySDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3Efficiency2\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3Efficiency2SDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3Transmission\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3TransmissionSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3Polarisation\0",					/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+			
+		"He3PolarisationSDev\0",				/* function name */
+		F_UTIL | F_EXTERNAL,				/* function category */
+		NT_FP64,							/* return value type */			
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,						/* parameter types */
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			NT_FP64,
+			0,								/* 0 terminates list of parameter types */
+
+	0,								// NOTE: 0 required to terminate the resource.
+END
